@@ -1,0 +1,72 @@
+<html land="en">
+    <link href="style.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title Document></title>
+
+</head>
+<body>
+    <div style='color: rgb(100,100,100)'>Some colors</div>
+    <u>
+    <h1>Demo on Javascript</h1>
+    </u>
+    <div class="leftimg"><img src="bunny.gif" height="130" width="140"></div>
+    <div class="rightimg"><img src="cat.gif" height="130" width="140"></div>
+    <script type="text/Javascript">
+        /*for(var v=0; v<10;v++){
+            var x=2;
+            if((v%x)==0){
+                document.write('<p>v='+v+'</p>');
+            }
+        }
+        let itemlist=[1,2,3,4];
+        //literal style object
+        let user={name: "Alexander", age: 35};
+        document.write('<p>Name= '+user.name+', Age= '+user.age+'</p>');
+        //function style object
+        function Person(name,age){
+            //this is used to declare propertiesfor Person object
+            this.name=name;
+            this.age=age;
+            //this.name & this.age declares two properties which are initialized by 2 param.
+        }
+        let user2= new Person('Bruce',40);
+        document.write('<p>Name= '+user2.name+', Age= '+user2.age+'</p>');
+        for(let index=0;index<itemlist.length;index++){
+            document.write('<p>itemlist= '+itemlist[index]+'</p>')
+        }
+        document.write('<p>value of x: '+x+'</p>');
+        var firstname="Cierra";
+        var age=21;
+        document.write('<h3>Name= '+firstname+', Age= ' +age+'</h3>');
+        let usrs=[
+            {name: "Sam", age:45},
+            {name: "Harry", age:43},
+            {name: "Bill", age:46}
+        ];
+        document.write('<p>Sophies dads: '+usrs[0].name+', '+usrs[1].name+' and '+usrs[2].name+'</p>');*/
+    </script>
+    <input type="text" id="i1">
+    <br/>
+
+    <button onclick="handleClick(event)"> My Button</button>
+    <p onclick="handleClick(event)">My Paragraph</p>
+    <div id="i2">My name is:</div>
+    <script type="text/javascript">
+        function handleClick(e){
+            console.log(e);
+            console.log(e.target);//tthis is one way to access the element
+            let ele=document.getElementById("i1");
+            console.log(ele.value);
+            let ele2= document.getElementById("i2"); //div#i2
+            ele2.innerHTML= ele2.innerHTML + <u>ele.value</u>
+            ;
+        }function addColor(c){
+            let ele=document.getElementById('i1');
+            ele.style.color=c;
+        }
+    </script>
+</body>
+</html>

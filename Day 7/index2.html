@@ -1,0 +1,31 @@
+<html land="en">
+    <link href="style.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title Document></title>
+
+</head>
+<body>
+    <u>
+    <h1>Event Handling on Javascript</h1>
+    </u>
+    <img src="bunny.gif" height="100" width="100">
+    <img src="cat.gif" height="100" width="100">
+    <div onclick="changeImages(event)" style='border:2px solid black;'>
+        <img src="bunny.gif" class="smallImages"/>
+        <img src="cat.gif" class="smallImages"/>
+    </div>
+    <script type="text/Javascript">
+        function changeImages(e){
+            let mainImage=document.getElementByiD('main');
+            let target=e.target;
+            if(target.tagName=='IMG'){
+                mainImage.src=target.src;
+            }
+            console.log(e.target);
+        }
+        </script>
+</body>
+</html>

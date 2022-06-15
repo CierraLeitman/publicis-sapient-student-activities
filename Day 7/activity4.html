@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .smallImages{
+            width:100;height:100;
+            border:2px solid black;
+            padding:2px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="c1" style="border:2px solid black" width="400" height="400"></canvas>
+    <script type='text/javascript'>
+        let ctx=document.getElementById('c1').getContext('2d');
+        ctx.beginPath();
+        ctx.arc(200,200,25,0,Math.PI,true);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(200,200,20,0,Math.PI,true);
+        ctx.fillStyle='yellow';
+    </script>
+</body>
+</html>
