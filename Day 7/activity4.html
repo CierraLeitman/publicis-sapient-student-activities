@@ -14,15 +14,20 @@
     </style>
 </head>
 <body>
-    <canvas id="c1" style="border:2px solid black" width="400" height="400"></canvas>
+    <canvas id="c1" style="border:2px solid rgb(191, 109, 191)" width="400" height="400"></canvas>
     <script type='text/javascript'>
         let ctx=document.getElementById('c1').getContext('2d');
         ctx.beginPath();
-        ctx.arc(200,200,25,0,Math.PI,true);
+        ctx.arc(200,200,35,0,Math.PI,true);
         ctx.fill();
-        ctx.beginPath();
-        ctx.arc(200,200,20,0,Math.PI,true);
-        ctx.fillStyle='yellow';
+        for (i=0;i<6;i++){
+            ctx.beginPath();
+            ctx.arc(200,200,35-(5*i),0,Math.PI,true);
+            let colorarr=['red','orange','yellow','green','blue','purple'];
+            ctx.fillStyle=colorarr[i];
+            ctx.fill();
+        }
+
     </script>
 </body>
 </html>
